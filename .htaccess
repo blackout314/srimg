@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.+)(\.(?:jpe?g|gif|png))$ index.php?r=$1$2 [NC,E=BREAKPOINT:%1,L]
+</IfModule>
